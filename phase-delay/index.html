@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phase → Delay Converter</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Phase → Delay Converter</h1>
+    <label>Phase [deg] (+advance / −delay)</label>
+    <input id="phi" type="text" inputmode="decimal" value="0">
+
+    <label>Frequency [Hz]</label>
+    <select id="freq">
+      <option value="30.87">B0 30.87</option>
+      <option value="32.70">C1 32.70</option>
+      <option value="36.71">D1 36.71</option>
+      <option value="41.20">E1 41.20</option>
+      <option value="43.65" selected>F1 43.65</option>
+      <option value="49.00">G1 49.00</option>
+      <option value="55.00">A1 55.00</option>
+      <option value="61.74">B1 61.74</option>
+      <option value="65.41">C2 65.41</option>
+      <option value="73.42">D2 73.42</option>
+      <option value="82.41">E2 82.41</option>
+      <option value="87.31">F2 87.31</option>
+    </select>
+
+    <label>Sample rate [Hz]</label>
+    <select id="fs">
+      <option>44100</option>
+      <option selected>48000</option>
+      <option>88200</option>
+      <option>96000</option>
+      <option>192000</option>
+    </select>
+
+    <div class="out" id="out"></div>
+  </div>
+</body>
+</html>

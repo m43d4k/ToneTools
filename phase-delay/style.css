@@ -1,0 +1,18 @@
+:root { --bg:#292929; --fg:#f2f2f2; --field:#ffffff; --fieldfg:#000; }
+* { box-sizing: border-box; }
+html,body { height:100%; }
+body {
+  margin:0; background:var(--bg); color:var(--fg);
+  font:16px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  display:flex; justify-content:center;
+}
+.wrap {
+  width:100%; max-width:520px; padding:24px;
+}
+@media (max-width:600px){ .wrap{ padding:12px; } }
+
+label{display:block;margin:.6rem 0 .2rem}
+input,select{font-size:16px;padding:.45rem .55rem;border-radius:6px;border:1px solid #0000}
+input[type="text"]{background:var(--field); color:var(--fieldfg);}
+select{background:var(--field); color:var(--fieldfg);}
+.out{margin-top:1rem;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:18px}
