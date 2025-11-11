@@ -15,5 +15,8 @@ ToneTools is a small collection of web tools related to sound and music.
 - [Phase → Delay Converter](https://m43d4k.github.io/ToneTools/phase-delay/)  
 — Convert phase shift (degrees) to time delay or advance in ms and samples.
 
+- [Delay & Reverb Calculator](https://m43d4k.github.io/ToneTools/delay-reverb/)  
+— Calculate pre-delay, decay, and total reverb time from BPM
+
 ## License
 MIT License

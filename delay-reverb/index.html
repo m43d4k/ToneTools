@@ -1,0 +1,23 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delay & Reverb Calculator</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+
+<div class="container">
+  <h1>Delay & Reverb Calculator</h1>
+  <label for="bpm">BPM</label>
+  <input id="bpm" type="number" value="120" min="20" max="300" step="1">
+  <table>
+    <thead>
+      <tr>
+        <th>Reverb Size</th>
+        <th>Pre-Delay (ms)</th>
+        <th>Decay (ms)</th>
+        <th>Total (ms)</th>
+      </tr>
+    </thead>
+    <tbody id="result-body"></tbody>
+  </table>
+</div>
