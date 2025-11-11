@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Note ↔ Frequency</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header>
+    <h1>Note ↔ Frequency</h1>
+    <p class="tagline">MIDI C3 = 60 convention note–frequency table</p>
+  </header>
+
+  <section class="controls">
+    <div class="buttons" id="pitchButtons"></div>
+    <div class="toggles">
+      <label><input type="checkbox" id="toggleOct"> Show ±½ Oct</label>
+    </div>
+    <div class="info">
+      <span>A4 = 440 Hz / C3 = MIDI 60</span>
+      <span>Display range: C−2 (8.176 Hz) – B8 (12543.854 Hz)</span>
+    </div>
+  </section>
+
+  <section class="table-wrap">
+    <table id="tonesTable" aria-label="note-frequency-table">
+      <thead>
+        <tr>
+          <th>Note</th>
+          <th>MIDI</th>
+          <th>Freq (Hz)</th>
+          <th>-½ Oct (Hz)</th>
+          <th>+½ Oct (Hz)</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <footer>
+    <small>Equal temperament / A4 = 440 Hz.</small>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
