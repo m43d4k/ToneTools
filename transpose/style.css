@@ -1,0 +1,113 @@
+body {
+  background: #1e1e1e;
+  color: #fff;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: nowrap;           /* 折り返し禁止 */
+  justify-content: center;
+  align-items: stretch;
+  gap: 8px;
+  width: 100%;
+  max-width: 960px;
+  box-sizing: border-box;
+}
+
+.section {
+  background: #2a2a2a;
+  border-radius: 10px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 1 clamp(180px, 20vw, 220px); /* PCでは幅固定・自然可変 */
+  box-sizing: border-box;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+.label.before { color: #ff66cc; }
+.label.after  { color: #c299ff; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 6px 10px;
+  margin-bottom: 4px;
+}
+
+.note-button {
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 50px;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+.note-button:hover { background-color: #444; }
+.note-button.selected.before { background-color: #ff66cc; color: #000; }
+.note-button.selected.after  { background-color: #c299ff; color: #000; }
+
+.result-box {
+  background: #2a2a2a;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 clamp(120px, 14vw, 150px); /* PCでは固定的な自然幅 */
+  box-sizing: border-box;
+}
+
+.result-label {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #ccc;
+}
+.result-value {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.result-degree {
+  font-size: 15px;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+/* 📱 スマホで可変幅を有効化 */
+@media (max-width: 720px) {
+  body { padding: 10px; }
+  .container {
+    gap: 6px;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .section,
+  .result-box {
+    flex: 1 1 auto;     /* 3ブロックすべて可変化 */
+    width: auto;
+    min-width: 0;
+    padding: 6px 8px;
+  }
+  .note-button {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+}
